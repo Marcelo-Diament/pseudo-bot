@@ -11,21 +11,17 @@ body {
 
 header,
 footer {
+    min-height: 5vh;
     width: 100vw;
     background-color: #f5f5f5;
     padding: 2.5vw;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-}
+footer { text-align: center }
 
 main {
-    padding: 2.5vw;
-    width: 50vw;
-    margin: auto;
+    padding: 15px;
+    min-height: calc(90vh - 85px);
 }
 
 h2 {
@@ -39,15 +35,9 @@ ul {
 }
 
 ul li {
-    margin: 20px auto;
+    margin: 25px auto;
     font-size: 1.05em;
     font-weight: bolder;
-}
-
-#historico {
-    min-height: 50vh;
-    max-height: 50vh;
-    overflow-y: scroll;
 }
 
 li.bot {
@@ -58,7 +48,6 @@ li.bot::before {
     content: 'Bot';
     position: relative;
     top: -20px;
-    left: 23px;
     font-size: 0.8em;
     font-style: italic;
     color: lightslategray;
@@ -73,7 +62,6 @@ li.user::after {
     content: 'Você';
     position: relative;
     top: -20px;
-    right: 30px;
     font-size: 0.8em;
     font-style: italic;
     color: #a131a1;
@@ -105,4 +93,22 @@ li.user::after {
 .opcoes-container button:hover {
     background-color: transparent;
     color: #599599;
+}
+@media only screen and (min-widith: 768px) {
+
+    main {
+        padding: 2.5vw;
+        width: 50vw;
+        margin: auto;
+    }
+
+    #historico {
+        min-height: 50vh;
+        max-height: 50vh;
+        overflow-y: scroll;
+    }
+
+    li.bot::before { left: 23px }
+        
+    li.user::after { right: 30px }
 }
