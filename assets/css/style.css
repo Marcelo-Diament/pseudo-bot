@@ -44,6 +44,12 @@ ul li {
     font-weight: bolder;
 }
 
+#historico {
+    min-height: 50vh;
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
 li.bot {
     color: darkslategray;
     text-align: left;
